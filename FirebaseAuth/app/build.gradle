@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\NghiaDang\\AndroidStudioProjects\\FirebaseProjects\\upload-keystore.jks')
+            storePassword '123456'
+            keyAlias = 'upload'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.firebaseauth2v"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable = false
+            minifyEnabled = false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-auth:18.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+    implementation 'com.firebaseui:firebase-ui-database:4.3.1'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'com.google.gms.google-services'

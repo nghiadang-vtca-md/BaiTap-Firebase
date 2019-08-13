@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FirebaseAuth2v</string>
+    <string name="default_web_client_id" translatable="false">681853897558-a3g9bq1qaq59c7i1k504ua6ra2bsgoo6.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">913216009025790</string>
+
+</resources>
